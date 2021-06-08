@@ -1,0 +1,418 @@
+/* This is a style css to the index.html in the root */
+body {
+  overflow-y: auto;
+  overflow-x: auto;
+  background-color: rgb(173, 210, 244);
+  height: 100%;
+  width: 100%;
+}
+
+/* Stlying for the first cell(top left cell, add button) */
+.header {
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  width: 100%;
+  background-color: rgb(9, 65, 114);
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+  color: rgb(246, 248, 250);
+}
+
+/* Styling for the main container that will hold all our cells */
+body.main-view main .container {
+  height: 100%;
+  width: 99%;
+  display: grid;
+  grid-template-areas:
+    "history      main cateMa"
+    "history   main cateMa"
+    "history    main cateMa";
+  grid-template-rows: 0.5fr 2fr 1.5fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  position: relative;
+  z-index: initial;
+  min-width: 1060px;
+}
+
+/* Stlying for the first cell(top left cell, add button) */
+body.main-view main .cell-1 {
+  height: 5rem;
+  grid-area: plus;
+}
+
+/* Stlying for the second cell (Middle left cell, Overdue) */
+body.main-view main .cell-2 {
+  grid-area: history;
+}
+
+/* Stlying for the third cell (Bottom left cell, Graph) */
+body.main-view main .cell-3 {
+  grid-area: footer;
+}
+
+/* Stlying for the fourth cell (Center cell, Focus) */
+body.main-view main .cell-4 {
+  grid-area: main;
+}
+
+/* Stlying for the fith cell(right cell, Categories) */
+body.main-view main .cell-5 {
+  grid-area: cateMa;
+}
+
+/* Styling for all the non-header text */
+body.main-view main .cell {
+  color: black;
+  text-align: center;
+  padding: 1em;
+}
+
+/* Styling for the Section containers */
+body.main-view main .section-container {
+  text-align: left;
+}
+
+/* Styling for the headers in the left cells (Overdue and Graph) */
+body.main-view main .section-header-side {
+  color: rgb(120, 120, 120);
+  font-size: 3em;
+  margin-top: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Styling for the headers in the middle and left cells (Focus and Categories) */
+body.main-view main .section-header-main {
+  color: rgb(9, 44, 82);
+  font-size: 5em;
+  margin-bottom: 8px;
+  margin-top: auto;
+}
+
+/* Styling for the journal entries shown in the history box */
+body.main-view main .journal-box-history {
+  background-color: rgb(210, 221, 232);
+  margin-top: 0.3em;
+  padding: 0.5em;
+  height: 45rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(40, 25, 3);
+  border-radius: 1em;
+}
+
+/* Setting the display for the history box scrollbar */
+body.main-view main .journal-box-history::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling for bullet entries that appear in all cells */
+body.main-view main .bullet {
+  display: flex;
+  align-items: center;
+  height: 3em;
+  font-size: 1.3em;
+  background-color: rgba(167, 200, 220, 0.925);
+  border-radius: 0.5em;
+  margin: 0.3rem;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+/* Styling for date entries */
+body.main-view main .date {
+  display: grid;
+  align-items: center;
+  height: 3em;
+  font-size: 1.3em;
+  background-color: rgba(167, 200, 220, 0.925);
+  border-radius: 0.5em;
+  margin: 0.3rem;
+  text-align: center;
+  padding-left: 0.5rem;
+}
+
+/* Styling for the buttons next to bullet (edit and detail) */
+body.main-view main .bullet-button {
+  border: none;
+  margin: 0.5rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  opacity: 0.6;
+  padding: 8px;
+  background-color: rgb(204, 225, 243);
+}
+
+body.main-view main .bullet-button :hover {opacity: 1}
+
+
+/* Stlying for the title of the categories in cell 5 */
+body.main-view main .title {
+  text-align: left;
+  padding-left: 1rem;
+  width: 90%;
+}
+
+/* Styling for bullet description */
+body.main-view main .description {
+  position: relative;
+  width: 100%;
+}
+
+/* Styling for the box that contains journal entries in cell 3 (Graph) */
+body.main-view main .graph-box {
+  margin-top: 0.3em;
+  padding: 0.5em;
+  height: 15rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(40, 25, 3);
+  border-radius: 1em;
+}
+
+/* Setting the display for the graph box scrollbar */
+body.main-view main .graph-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling for the box that contains journal entries in the main cell, cell 4 (Focus) */
+body.main-view main .journal-main-box {
+  background-color: rgb(210, 221, 232);
+  margin-top: 0.3em;
+  padding: 0.5em;
+  height: 45rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  border-style: solid;
+  border-color: rgb(40, 25, 3);
+  border-radius: 1em;
+}
+
+/* Setting the display for the graph box scrollbar */
+body.main-view main .journal-main-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling for month selection (Not currently used) */
+body.main-view main .MonthSection {
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+  border-width: 2px;
+}
+
+/* Styling for the big buttons (Add Category, select all, deselect all) */
+body.main-view main .big-button {
+  cursor: pointer;
+  font-size: 1.5em;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 2.7rem;
+  background-color: rgb(93, 135, 160);
+  border-radius: 0.3em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+
+/* Styling for the big buttons when mouse is hovered over (Add Category, select all, deselect all) */
+body.main-view main .big-button {
+  vertical-align: middle;
+  background-color: rgb(72, 116, 142);
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+body.main-view main .big-button:hover,body.main-view main .big-button:active {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* Stlying for box containing the categories in cell 5 */
+body.main-view main .category-box {
+  background-color: rgb(210, 221, 232);
+  margin-top: 0.3em;
+  padding: 0.5em;
+  height: 32rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  border-style: solid;
+  border-color: rgb(40, 25, 3);
+  border-radius: 1em;
+}
+
+/* Setting the display for the category box scrollbar */
+body.main-view main .category-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling for our demo Category */
+body.main-view main .category-inner-entry {
+  height: 3.5em;
+  font-size: 2em;
+  background-color: antiquewhite;
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 0.5em;
+  margin: 0.3rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* Stlying for category edit button */
+body.main-view main .cate-button {
+  margin: 0.5rem;
+  line-height: 3rem;
+  font-size: 1rem;
+  background-color: aquamarine;
+}
+
+/* Styling for add bullet button in top left corner */
+body.main-view main #add-bullet-button {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 1px;
+  opacity: 0.6;
+}
+
+body.main-view main #add-bullet-button: :hover {opacity: 1}
+
+body.main-view main .new-button {
+  cursor: pointer;
+  background-color: rgb(75, 164, 220);
+}
+
+/* Adding bit "+" symbol to add button */
+body.main-view main .new-button:hover {
+  background-color: rgb(35, 137, 201);
+}
+
+body.main-view main .new-button:active {
+  background-color: rgb(32, 102, 145);
+}
+
+/* Default main-view */
+body.default-view cate-editor-page {
+  display: none;
+}
+
+body.default-view bullet-editor-page {
+  display: none;
+}
+
+/* Bullet Editor CSS Start */
+body.bulletEditor cate-editor-page {
+  display: none;
+}
+
+body.bulletEditor bullet-editor-page {
+  display: block;
+}
+
+/* Bullet Editor CSS End */
+
+/* Cate Editor CSS Start */
+body.cateEditor bullet-editor-page {
+  display: none;
+}
+
+body.cateEditor cate-editor-page {
+  display: block;
+}
+
+/* Cate Editor CSS End */
+
+/* For Testing Purpose */
+.des {
+  overflow: expand;
+  display: none;
+  align-items: center;
+  height: auto;
+  background-color: rgba(167, 200, 220, 0.925);
+  font-size: 1em;
+  border-radius: 0.5em;
+  margin: 0.5rem;
+  text-align: left;
+  margin-left: 2rem;
+  padding: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+/* Stlying for category edit button */
+.checkbox {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Stlying for category edit button */
+.checkbox:checked::after {
+  content: "\2714";
+  font-size: 50px;
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  color: #0994ff;
+}
+
+body.main-view main .date:hover {
+  display: grid;
+  align-items: center;
+  height: 3em;
+  font-size: 1.3em;
+  background-color: rgba(123, 151, 169, 0.925);
+  border-radius: 0.5em;
+  margin: 0.3rem;
+  text-align: center;
+}
+
+body.main-view main .date:active {
+  display: grid;
+  align-items: center;
+  height: 3em;
+  font-size: 1.3em;
+  background-color: rgba(60, 77, 87, 0.925);
+  border-radius: 0.5em;
+  margin: 0.3rem;
+  text-align: center;
+}
+
+.big-button:active {
+  box-shadow: 0 5px #336699;
+  transform: translateY(4px);
+}
+
+.bullet.new-button {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.bullet.new-button:active {
+  box-shadow: 0 5px #336699;
+  transform: translateY(4px);
+}
+
+
